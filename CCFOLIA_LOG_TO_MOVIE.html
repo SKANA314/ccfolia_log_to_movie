@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CCFOLIA LOG TO MOVIE</title>
+</head>
+<body>
+    <header>
+        <h1>CCFOLIA LOG TO MOVIE</h1>
+        <!-- 説明 -->
+        <div class="about">
+            <p>CCFOLIAのセッションログをYMM4や合成音声ソフトで使える形に編集するツール<a href="guide.html">[使い方･ご利用に際して]</a></p>
+        </div>
+    </header>
+    
+    <main>
+        <div id="flex_console">
+            <div id="console">
+                <!-- HTML読み込み -->
+                <div class="import">
+                    <h3>変換するファイルを選択</h3>
+                    <input type="file" accept=".html" id="input">
+                </div>
+                
+                <!-- 対応ソフト -->
+                <h3>変換形式を選択</h3>
+                <select name="softwaer" id="softwaer">
+                    <option value="YMM4_txt">ゆっくりムービーメーカー4(txt)</option>
+                    <option value="YMM4_csv">ゆっくりムービーメーカー4(csv)</option>
+                    <option value="VOICEVOX">VOICEVOX</option>
+                    <option value="COEIROINC">COEIROINC</option>
+                    <option value="AIVOICE">A.I.VOICE</option>
+                </select>
+
+                <!-- キャラクター名 -->
+                <div id="character">
+                </div>
+            </div>
+        </div>
+        <!-- プレビュー画面 -->
+        <div id="flex_preview">
+            <h3>プレビュー</h3>
+            <textarea name="preview" id="preview" cols="30" rows="10" readonly></textarea>
+        </div>
+    </main>
+    <footer>
+        <button id="submit">出力</button>
+    </footer>
+</body>
+<script src="refresh.js"></script>
+</html>

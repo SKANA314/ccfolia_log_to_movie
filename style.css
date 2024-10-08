@@ -1,0 +1,150 @@
+html body{
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+/* ヘッダー要素 */
+header{
+    background-color: #333;
+    color: #eee;
+    width: 99%;
+    padding-left: 1%;
+
+}
+header h1{
+    margin: 0;
+}
+header p{
+    margin: 0;
+}
+header a{
+    display: inline-block;
+    color: #aff;
+}
+/* メイン */
+main{
+    margin: 0 auto 0 auto;
+    max-width: 99%;
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    height: 78vh;
+}
+main h2,main h3,main h4,main p{
+    margin: 8px 0 3px 0;
+}
+main p{
+    margin-left: 5px;
+}
+main h3{
+    margin: 8px 0 3px 0;
+}
+#flex_console,#flex_preview{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+#flex_console{
+    overflow: auto;
+}
+/* テーブル */
+table{
+    border-collapse: collapse;
+    border: 1px #333 solid;
+    margin: 0;
+    overflow: auto;
+}
+th,td{
+    border-collapse: collapse;
+    border: 1px #333 solid;
+    width: 100%;
+    height: 10px;
+    padding: 1px;
+}
+th{
+    white-space: nowrap;
+}
+.style,.new_name{
+    height: 100%;
+    border: none;
+    padding: 1px;
+    box-sizing: border-box;
+    resize: none;
+    vertical-align: top;
+    overflow: hidden; 
+    field-sizing: content;
+    width: 10em;
+}
+.show{
+    text-align: center;
+}
+/* プレビュー */
+#preview{
+    box-sizing: border-box;
+    resize: none;
+    width: 100%;
+    height: 100%;
+}
+/* ガイド */
+#guide{
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* フッター要素 */
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    text-align: center;
+}
+button{
+    height: 50px;
+    width: 200px;
+    margin: 10px;
+    font-size: large;
+    font-weight: bold;
+}
+
+@media (max-width:1020px) {
+    html{
+        display:block ;
+    }
+    body{
+        display:block ;
+    }
+    /* メイン */
+    main{
+        display:block ;
+        height: auto;
+        padding-bottom: 80px;
+    }
+    #flex_console,#flex_preview{
+        display: block;
+        width: 100%;
+        margin-bottom: 0px;
+    }
+    /* #flex_preview{
+        display: inline;
+    } */
+    table,th,td{
+        border-collapse: collapse;
+        border: 1px #000 solid;
+        width: 100%;
+    }
+    /* プレビュー */
+    #preview{
+        box-sizing: border-box;
+        field-sizing: content;
+        width: 100%;
+        min-height: 10em;
+    }
+    #guide{
+        width: 90%;
+    }
+}
