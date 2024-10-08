@@ -4,7 +4,6 @@
 // 
 // グローバル変数
 // 
-let file=""; //読み込んだファイル
 let logData=[];//ログデータ　{tab:"",name:"",word:""}
 let character=[];//キャラクターデータ　{oldName:"",newName:"",style:"",show:1}
 let softwaer=document.querySelector("#softwaer").value;//出力するソフトウェアの形式
@@ -93,10 +92,20 @@ function show(characterNo){
 // 
 // イベント
 // 
+// 他のページからブラウザで戻ってきたとき
+window.addEventListener("pageshow", function (event) {
+    var entries = performance.getEntriesByType("navigation");
+    entries.forEach(function (entry) {
+      if (entry.type == "back_forward") {
+        // 画面を再読み込みする
+        location.reload();
+      }
+    });
+});
 //ファイルが読み込まれたとき
 document.querySelector("#input").addEventListener("change",function(){
     // ファイル情報の取得
-    file=document.querySelector("#input").files[0];
+    let file=document.querySelector("#input").files[0];
     // ファイルリーダー
     let reader=new FileReader();
     // ファイルの内容を読み込む
